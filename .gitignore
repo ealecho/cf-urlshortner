@@ -1,9 +1,10 @@
 # Dependencies
 node_modules/
 
-# Build artifacts
+# Zig build artifacts
 .zig-cache/
 zig-out/
+zig-cache/
 
 # Wrangler local state
 .wrangler/
@@ -11,12 +12,30 @@ zig-out/
 # Environment variables
 .env
 .env.local
+.env.production
 .dev.vars
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+wrangler.log
+
+# Package manager locks (optional - uncomment if you don't want to track)
+# package-lock.json
+
+# TypeScript build output
+dist/
+*.tsbuildinfo
+
+# Test coverage
+coverage/
