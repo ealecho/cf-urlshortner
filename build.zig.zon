@@ -6,7 +6,7 @@
     .dependencies = .{
         .cf_workerz = .{
             .url = "https://github.com/ealecho/cf-workerz/archive/refs/heads/main.tar.gz",
-            .hash = "cf_workerz-0.1.0-DP5qTyzvAwBCDEVagsTsvoUl5dWWc2rzxGKo3Bsf_1jd",
+            .hash = "cf_workerz-0.1.0-DP5qT0LoBAD-Kp96NkWOTJDivPrXQ3aHYBryURHKFj2p",
         },
     },
     .paths = .{
