@@ -124,15 +124,28 @@ npx wrangler deploy
 ```
 .
 ├── src/
-│   ├── main.zig      # Main worker logic, routes, handlers
-│   ├── utils.zig     # Validation utilities
-│   └── index.ts      # TypeScript runtime bridge
+│   ├── main.zig              # Entry point (minimal)
+│   ├── router.zig            # Route definitions
+│   ├── handlers/
+│   │   ├── health.zig        # Health check endpoint
+│   │   ├── redirect.zig      # Short URL redirect
+│   │   ├── stats.zig         # Click statistics
+│   │   └── urls.zig          # URL CRUD operations
+│   ├── models/
+│   │   └── url.zig           # Data structures (UrlRecord, etc.)
+│   ├── services/
+│   │   ├── cache.zig         # KV caching logic
+│   │   ├── codegen.zig       # Short code generation
+│   │   └── db.zig            # D1 database operations
+│   ├── utils/
+│   │   └── validation.zig    # URL/code validation (with tests)
+│   └── index.ts              # TypeScript runtime bridge
 ├── migrations/
-│   └── 001_init.sql  # Database schema
-├── build.zig         # Zig build configuration
-├── build.zig.zon     # Zig dependencies
-├── wrangler.toml     # Cloudflare Workers config
-└── package.json      # Node.js scripts
+│   └── 001_init.sql          # Database schema
+├── build.zig                 # Zig build configuration
+├── build.zig.zon             # Zig dependencies
+├── wrangler.toml             # Cloudflare Workers config
+└── package.json              # Node.js scripts
 ```
 
 ## License
