@@ -1,0 +1,17 @@
+.{
+    .name = .cf_urlshortner,
+    .version = "0.1.0",
+    .fingerprint = 0xe6c30ead967956fc,
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{
+        .cf_workerz = .{
+            .url = "https://github.com/ealecho/cf-workerz/archive/refs/heads/main.tar.gz",
+            .hash = "cf_workerz-0.1.0-DP5qTyzvAwBCDEVagsTsvoUl5dWWc2rzxGKo3Bsf_1jd",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

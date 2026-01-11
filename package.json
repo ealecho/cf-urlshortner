@@ -1,0 +1,19 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx wrangler@latest dev --port 8787",
+    "deploy": "npx wrangler@latest deploy",
+    "build": "zig build",
+    "test": "zig build test",
+    "db:create": "npx wrangler@latest d1 create url-shortener-db",
+    "db:migrate": "npx wrangler@latest d1 execute url-shortener-db --local --file=./migrations/001_init.sql",
+    "db:migrate:remote": "npx wrangler@latest d1 execute url-shortener-db --remote --file=./migrations/001_init.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241106.0",
+    "typescript": "^5.3.0",
+    "wrangler": "^4.58.0"
+  }
+}
