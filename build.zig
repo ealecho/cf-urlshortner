@@ -40,9 +40,9 @@ pub fn build(b: *std.Build) void {
     // =========================================================================
     const native_target = b.standardTargetOptions(.{});
 
-    // Create test module for utils.zig (pure functions, no WASM deps)
+    // Create test module for validation.zig (pure functions, no WASM deps)
     const test_module = b.createModule(.{
-        .root_source_file = b.path("src/utils.zig"),
+        .root_source_file = b.path("src/utils/validation.zig"),
         .target = native_target,
         .optimize = optimize,
     });
